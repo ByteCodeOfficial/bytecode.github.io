@@ -1,0 +1,130 @@
+/* Основные стили для страницы Регистрации */
+.registration {
+    padding: 80px 20px;
+    background-color: #0d0d0d;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.registration::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 191, 255, 0.1), transparent);
+    animation: shine 5s infinite;
+}
+
+.registration__header {
+    margin-bottom: 50px;
+}
+
+.registration__title {
+    font-size: 48px;
+    font-family: 'Orbitron', sans-serif;
+    color: #00bfff;
+    text-shadow: 0 0 10px #00bfff, 0 0 20px #00bfff;
+    margin-bottom: 20px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.registration__description {
+    font-size: 18px;
+    color: #00bfff;
+    max-width: 600px;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.registration__form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 191, 255, 0.2);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    color: #00bfff;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #00bfff;
+    border-radius: 5px;
+    background-color: #0d0d0d;
+    color: #00bfff;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input::placeholder {
+    color: #0077ff;
+}
+
+.form-group input:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 10px rgba(0, 191, 255, 0.5);
+    outline: none;
+}
+
+.registration__button {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(145deg, #00bfff, #0077ff);
+    color: #0d0d0d;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+}
+
+.registration__button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 191, 255, 0.5);
+}
+
+.registration__login-link {
+    font-size: 16px;
+    color: #00bfff;
+    margin-top: 20px;
+}
+
+.registration__login-link a {
+    color: #0077ff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.registration__login-link a:hover {
+    color: #00bfff;
+}
+
+/* Анимации */
+@keyframes shine {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
