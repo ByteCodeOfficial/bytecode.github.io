@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин - ByteCode</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/shop.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Шапка -->
+    <header class="header">
+        <div class="header__logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="ByteCode Logo">
+                <span>ByteCode</span>
+            </a>
+        </div>
+        <div class="header__menu-toggle" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="header__nav" id="header-nav">
+            <div class="header__links">
+                <a href="about.html">О нас</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+            <div class="header__buttons">
+                <a href="login.html" class="btn btn-login">Вход</a>
+                <a href="registration.html" class="btn btn-register">Регистрация</a>
+            </div>
+        </nav>
+    </header>
+    
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <a href="#">
+                <img src="img/logo.png" alt="ByteCode Logo">
+            </a>
+        </div>
+        <div class="navbar__links" id="navbar-links">
+            <a href="#">IT-новости</a>
+            <a href="#">Видеоуроки</a>
+            <a href="shop.html">Магазин</a>
+        </div>
+    </nav>
+    
+    <!-- Бургер-меню -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu__content">
+            <a href="#">IT-новости</a>
+            <a href="#">Видеоуроки</a>
+            <a href="shop.html">Магазин</a>
+            <a href="about.html">О нас</a>
+            <a href="contacts.html">Контакты</a>
+            <button class="btn btn-login">Вход</button>
+            <button class="btn btn-register">Регистрация</button>
+        </div>
+    </div>
+
+    <!-- Основной контент -->
+    <main class="content">
+        <!-- Раздел Магазин -->
+        <section class="shop">
+            <div class="shop__header">
+                <h2 class="shop__title">Магазин</h2>
+                <p class="shop__description">
+                    Скачивайте проекты с уроков и программы для их использования. Некоторые материалы доступны только для зарегистрированных пользователей.
+                </p>
+            </div>
+            <div class="shop__filters">
+                <button class="shop__filter-btn active" data-category="all">Все</button>
+                <button class="shop__filter-btn" data-category="projects">Проекты</button>
+                <button class="shop__filter-btn" data-category="software">ПО</button>
+                <button class="shop__filter-btn" data-category="premium">Премиум</button>
+            </div>
+            <div class="shop__items">
+                <!-- Товар 1: Проект -->
+                <div class="shop__item" data-category="projects">
+                    <div class="shop__item-image">
+                        <img src="img/project1.jpg" alt="Проект 1">
+                    </div>
+                    <div class="shop__item-content">
+                        <h3 class="shop__item-title">Проект 1</h3>
+                        <p class="shop__item-description">Исходный код проекта с урока по JavaScript.</p>
+                        <a href="#" class="btn btn-download">Скачать</a>
+                    </div>
+                </div>
+                <!-- Товар 2: ПО -->
+                <div class="shop__item" data-category="software">
+                    <div class="shop__item-image">
+                        <img src="img/software1.jpg" alt="Программа 1">
+                    </div>
+                    <div class="shop__item-content">
+                        <h3 class="shop__item-title">Программа 1</h3>
+                        <p class="shop__item-description">Программа для разработки и тестирования.</p>
+                        <a href="#" class="btn btn-download">Скачать</a>
+                    </div>
+                </div>
+                <!-- Товар 3: Премиум -->
+                <div class="shop__item" data-category="premium">
+                    <div class="shop__item-image">
+                        <img src="img/premium1.jpg" alt="Премиум 1">
+                    </div>
+                    <div class="shop__item-content">
+                        <h3 class="shop__item-title">Премиум 1</h3>
+                        <p class="shop__item-description">Эксклюзивный материал для зарегистрированных пользователей.</p>
+                        <a href="registration.html" class="btn btn-download">Требуется регистрация</a>
+                    </div>
+                </div>
+                <!-- Товар 4: Проект -->
+                <div class="shop__item" data-category="projects">
+                    <div class="shop__item-image">
+                        <img src="img/project2.jpg" alt="Проект 2">
+                    </div>
+                    <div class="shop__item-content">
+                        <h3 class="shop__item-title">Проект 2</h3>
+                        <p class="shop__item-description">Исходный код проекта с урока по Python.</p>
+                        <a href="#" class="btn btn-download">Скачать</a>
+                    </div>
+                </div>
+                <!-- Товар 5: ПО -->
+                <div class="shop__item" data-category="software">
+                    <div class="shop__item-image">
+                        <img src="img/software2.jpg" alt="Программа 2">
+                    </div>
+                    <div class="shop__item-content">
+                        <h3 class="shop__item-title">Программа 2</h3>
+                        <p class="shop__item-description">Программа для анализа данных.</p>
+                        <a href="#" class="btn btn-download">Скачать</a>
+                    </div>
+                </div>
+                <!-- Товар 6: Премиум -->
+                <div class="shop__item" data-category="premium">
+                    <div class="shop__item-image">
+                        <img src="img/premium2.jpg" alt="Премиум 2">
+                    </div>
+                    <div class="shop__item-content">
+                        <h3 class="shop__item-title">Премиум 2</h3>
+                        <p class="shop__item-description">Эксклюзивный материал для зарегистрированных пользователей.</p>
+                        <a href="registration.html" class="btn btn-download">Требуется регистрация</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="footer__left">
+            <div class="footer__logo">
+                <a href="#">
+                    <img src="img/logo.png" alt="ByteCode Logo">
+                    <span>ByteCode</span>
+                </a>
+            </div>
+            <button class="footer__scroll-top" onclick="scrollToTop()">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </div>
+        <div class="footer__center">
+            <h3>Информация</h3>
+            <ul>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer__right">
+            <h3>Социальные сети</h3>
+            <div class="footer__socials">
+                <a href="#" class="social-link" title="ВКонтакте">
+                    <i class="fab fa-vk"></i>
+                </a>
+                <a href="#" class="social-link" title="Telegram">
+                    <i class="fab fa-telegram"></i>
+                </a>
+                <a href="#" class="social-link" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="#" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Копирайт -->
+    <div class="copyright">
+        &copy; 2025 ByteCode. Все права защищены.
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>
